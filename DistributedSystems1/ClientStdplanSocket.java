@@ -1,5 +1,5 @@
 /**
-*@author Dominik Gierczak Martikelnr. 1132980 Übung1 Distributed Systems Hoja
+*@author DomG Distributed Systems 
 *@version 2.0
 */
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class ClientStdplanSocket extends Vorlesung {
 		String programmlaeuft="ja";
 		String wahl="";
 		System.out.println(alleVorlesungen);
-		System.out.println("\t\tWillkommen zur Stundenplanverwaltung für Clients");
+		System.out.println("\t\tWillkommen zur Stundenplanverwaltung fÃ¼r Clients");
 		
 		while(!(programmlaeuft.equalsIgnoreCase("nein"))){
 			/*
@@ -39,18 +39,18 @@ public class ClientStdplanSocket extends Vorlesung {
 			 */
 			System.out.println("\n\t\t--------------------------------------------\n");
 			System.out.println("\n\t\tBitte treffen Sie Ihre Auswahl (1/2/3/4):");
-			System.out.println("\n\t\t\t1) Füge Vorlesung hinzu");
+			System.out.println("\n\t\t\t1) FÃ¼ge Vorlesung hinzu");
 			System.out.println("\n\t\t\t2) Hole alle Vorlesungen");
 			System.out.println("\n\t\t\t3) Wie viel Freizeit habe ich");
 			System.out.println("\n\t\t\t4) Schliesse Programm");
 			System.out.println("\n\t\t--------------------------------------------\n");
 			wahl=eingabe.next();
 			/*
-			 * Menüauswahl auf client was getan werden soll
+			 * MenÃ¼auswahl auf client was getan werden soll
 			 */
 			switch(wahl){
 			
-				case "1": 			System.out.println("\t\tSie haben "+wahl+") Füge Vorlesung hinzu gewählt\n");
+				case "1": 			System.out.println("\t\tSie haben "+wahl+") FÃ¼ge Vorlesung hinzu gewÃ¤hlt\n");
 									eingabeVorlesungen();
 									printAll();
 									String printall =printAll();
@@ -59,13 +59,13 @@ public class ClientStdplanSocket extends Vorlesung {
 									System.out.println(alleVorlesungen);
 								
 				break;
-				case "2": 			System.out.println("\t\tSie haben "+wahl+") Hole alle Vorlesungen  gewählt\n");
+				case "2": 			System.out.println("\t\tSie haben "+wahl+") Hole alle Vorlesungen  gewÃ¤hlt\n");
 									holeAlleVorlesungen();
 									System.out.println(alleVorlesungen);							
 				break;
-				case "3": 			System.out.println("\t\tSie haben "+wahl+") Wieviel Zeit habe ich gewählt\n");
+				case "3": 			System.out.println("\t\tSie haben "+wahl+") Wieviel Zeit habe ich gewÃ¤hlt\n");
 				break;
-				case "4": 			System.out.println("\t\tSie haben "+wahl+") Schliesse Programm gewählt\n");
+				case "4": 			System.out.println("\t\tSie haben "+wahl+") Schliesse Programm gewÃ¤hlt\n");
 									schliesseProgramm();
 									System.exit(1);
 				break;
@@ -75,11 +75,11 @@ public class ClientStdplanSocket extends Vorlesung {
 			
 			
 			/*
-			 * abfrage ob äussere Schleife noch laufen soll oder programm beendet wird (wenn man wahl=4 trifft soll an server serverprogrun="nein" gesendet werden und clientprogrun="nein" auf client aus schleife springen und beenden
+			 * abfrage ob Ã¤ussere Schleife noch laufen soll oder programm beendet wird (wenn man wahl=4 trifft soll an server serverprogrun="nein" gesendet werden und clientprogrun="nein" auf client aus schleife springen und beenden
 			 */
-		System.out.println("\t\tMöchten Sie im Clientprogramm fortfahren? (ja/nein)\n");
+		System.out.println("\t\tMÃ¶chten Sie im Clientprogramm fortfahren? (ja/nein)\n");
 		programmlaeuft=eingabe.next();
-		//if(programmlaeuft.equalsIgnoreCase("nein"))  hier anders gelöst in der while schleife
+		//if(programmlaeuft.equalsIgnoreCase("nein"))  hier anders gelÃ¶st in der while schleife
 		//break;
 		}//ende while programm auf client
 		/*
@@ -107,7 +107,7 @@ public class ClientStdplanSocket extends Vorlesung {
 		
 			alleVorlesungen.add(tmp);
 		
-			System.out.println("Möchten Sie noch eine Vorlesung eingeben? (ja/nein)\n");
+			System.out.println("MÃ¶chten Sie noch eine Vorlesung eingeben? (ja/nein)\n");
 			String weiter;
 			weiter=eingabe.next();
 			if(weiter.equalsIgnoreCase("nein"))
@@ -116,7 +116,7 @@ public class ClientStdplanSocket extends Vorlesung {
 	}//ende eingabeVorlesungen()
 	
 	/*
-	 * fügt auf dem server vorlesungen hinzu
+	 * fÃ¼gt auf dem server vorlesungen hinzu
 	 */
 	public static void fuegeVorlesungHinzu(){
 		try {
@@ -132,12 +132,12 @@ public class ClientStdplanSocket extends Vorlesung {
 			try{
 				scanner = new Scanner(file);
 				String tmpOfFile="";
-				//printW.println("Nachricht vom Client:"); // würde sonst in der serverdatei.txt mitgespeichert werden wegen printW
+				//printW.println("Nachricht vom Client:"); // wÃ¼rde sonst in der serverdatei.txt mitgespeichert werden wegen printW
 				while (scanner.hasNext()){
 					tmpOfFile=scanner.nextLine(); //einlesen in tmpOfFile
-					printW.println(tmpOfFile); //übertragung von tmpOfFile
+					printW.println(tmpOfFile); //Ã¼bertragung von tmpOfFile
 				}//ende while
-				//printW.println("Daten vom Client vollständig übertragen. \nEnde der Übertragung vom Client!\n"); // würde sonst in der serverdatei.txt mitgespeichert werden wegen printW
+				//printW.println("Daten vom Client vollstÃ¤ndig Ã¼bertragen. \nEnde der Ãœbertragung vom Client!\n"); // wÃ¼rde sonst in der serverdatei.txt mitgespeichert werden wegen printW
 		}catch(FileNotFoundException e){
 		System.out.println("Datei nicht gefunden");
 		}
@@ -222,7 +222,7 @@ public static void schliesseProgramm(){
 		PrintWriter printW=new PrintWriter(osw);
 	
 		String serverprogrun = "beenden";
-		printW.println(serverprogrun); //übertragung damit server beendet
+		printW.println(serverprogrun); //Ã¼bertragung damit server beendet
 		printW.flush();
 		printW.close();
 		socket.close();	
