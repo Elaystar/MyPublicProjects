@@ -1,5 +1,5 @@
 /**
- * author Dominik Gierczak
+ * author DomG
  * version 2.0
  */
 
@@ -66,7 +66,7 @@ public class ServerSocketStdplan {
 			File file = new File("serverdatei.txt");
 			Scanner scanner = null;
 			try {
-				//printW.println("\nDaten der serverdatei.txt auf dem Server:\n"); // würde sonst in der serverdatei.txt mitgespeichert werden wegen printW
+				//printW.println("\nDaten der serverdatei.txt auf dem Server:\n"); // wÃ¼rde sonst in der serverdatei.txt mitgespeichert werden wegen printW
 				scanner = new Scanner(file);
 				String tmp = "";
 				while (scanner.hasNext()) {
@@ -74,7 +74,7 @@ public class ServerSocketStdplan {
 					printW.println(tmp);
 					printW.flush();
 				}
-				printW.println("\nDaten vom Server vollständig vom übertragen.\n Ende der Übertragung vom Server!");
+				printW.println("\nDaten vom Server vollstÃ¤ndig vom Ã¼bertragen.\n Ende der Ãœbertragung vom Server!");
 				printW.close();	
 			} catch (FileNotFoundException e) {
 				System.out.println("File not found!");
@@ -110,9 +110,9 @@ public class ServerSocketStdplan {
 			System.out.println("Kann nicht den FileWriter schliessen");
 			}
 	
-	}// while ende vom serverläuft	
+	}// while ende vom serverlÃ¤uft	
 		System.exit(1);
-	/*die übergabe jedes einzelnen strings jeder vorlesung müssen hier beim Server zu einem string verbunden werden
+	/*die Ã¼bergabe jedes einzelnen strings jeder vorlesung mÃ¼ssen hier beim Server zu einem string verbunden werden
 	public String printAll()
 	{
 		String stringAlleVorlesungen ="";
