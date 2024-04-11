@@ -1,5 +1,5 @@
 /**
-*@author Dominik Gierczak Martikelnr. 1132980 Übung2 RMI Distributed Systems Hoja
+*@author DomG RMI Distributed Systems
 *@version 2.0
 */
 
@@ -36,7 +36,7 @@ public class Server_RMI_Stundenplan extends UnicastRemoteObject implements I_RMI
 		
 		
 		/**
-		 * fügt vorlesung dem statischen objekt zu
+		 * fÃ¼gt vorlesung dem statischen objekt zu
 		 */
 		init();
 		alleVorlesungen.add(neueV);
@@ -50,7 +50,7 @@ public class Server_RMI_Stundenplan extends UnicastRemoteObject implements I_RMI
 		}
 		
 		/*
-		System.out.println("Sie haben beenden gewählt\nFolgendes wird in datei geschrieben:\n");
+		System.out.println("Sie haben beenden gewÃ¤hlt\nFolgendes wird in datei geschrieben:\n");
 		
 		String stringAlleVorlesungen ="";
 		String separator="\n";
@@ -92,7 +92,7 @@ System.out.println("Kann nicht den FileWriter schliessen");
 		super();
 	}
 	/**
-	 * Arrayliste erzeugen für object das dann zurück gesendet werden kann
+	 * Arrayliste erzeugen fÃ¼r object das dann zurÃ¼ck gesendet werden kann
 	 */
 	public ArrayList<Vorlesung> holeAlleVorlesungen() throws RemoteException{
 		
@@ -110,7 +110,7 @@ System.out.println("Kann nicht den FileWriter schliessen");
 		//I_RMI_Stundenplan Datenbank=(I_RMI_Stundenplan)Naming.lookup("localhost/Vorlesungsservice");
 		//alleVorlesungen=Datenbank.holeAlleVorlesungen();
 		
-		System.out.println("Sie haben beenden gewählt\nFolgendes wird in datei geschrieben:\n");
+		System.out.println("Sie haben beenden gewÃ¤hlt\nFolgendes wird in datei geschrieben:\n");
 		
 		try{
 			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("zwischenspeicher.dat"));
@@ -198,17 +198,17 @@ System.out.println("Kann nicht den FileWriter schliessen");
 		String[] strArr_tage = new String[5];
 		strArr_tage = new String[50];
 						
-		strArr_tage[0]="Es sind noch "+restMo+" Stunden übrig am Montag";
-		strArr_tage[1]="Es sind noch "+restDi+" Stunden übrig am Dienstag";
-		strArr_tage[2]="Es sind noch "+restMi+" Stunden übrig am Mittwoch";
-		strArr_tage[3]="Es sind noch "+restDo+" Stunden übrig am Donnerstag";
-		strArr_tage[4]="Es sind noch "+restFr+" Stunden übrig am Freitag";
+		strArr_tage[0]="Es sind noch "+restMo+" Stunden Ã¼brig am Montag";
+		strArr_tage[1]="Es sind noch "+restDi+" Stunden Ã¼brig am Dienstag";
+		strArr_tage[2]="Es sind noch "+restMi+" Stunden Ã¼brig am Mittwoch";
+		strArr_tage[3]="Es sind noch "+restDo+" Stunden Ã¼brig am Donnerstag";
+		strArr_tage[4]="Es sind noch "+restFr+" Stunden Ã¼brig am Freitag";
 		
 		return strArr_tage;	
 	}
 		
 	/**
-	 * init liest aus datei zwischenspeicher.dat und übergibt werte an das object 
+	 * init liest aus datei zwischenspeicher.dat und Ã¼bergibt werte an das object 
 	 */
 	public void init() throws RemoteException  {
 		System.out.println("Init Methode gestartet:\n");
@@ -250,7 +250,7 @@ System.out.println("Kann nicht den FileWriter schliessen");
 		for (int i = 0; i < reader.size(); i++) {
 		*/
 			/**
-			 * hier übergebe ich der ArrayList<Vorlesung> wieder die einzelnen Vorlesungen unter position i gespeichert.
+			 * hier Ã¼bergebe ich der ArrayList<Vorlesung> wieder die einzelnen Vorlesungen unter position i gespeichert.
 			 */
 		/*
 			alleVorlesungen.get(i)=reader;
@@ -266,7 +266,7 @@ System.out.println("Kann nicht den FileWriter schliessen");
 	}
 
 	/**
-**brauch ich nicht weil schon registry object erzeugt nämlich RMI_object_server
+**brauch ich nicht weil schon registry object erzeugt nÃ¤mlich RMI_object_server
 		**Server_RMI_Stundenplan stundenplan_obj= new Server_RMI_Stundenplan();
 **		Server_RMI_Stundenplan stundenplan_obj= new Server_RMI_Stundenplan();
 	 * @throws RemoteException 
