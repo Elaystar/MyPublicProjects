@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/scoreleiste"
+        android:layout_gravity="right"
+        android:text="@string/score_caption" />
+
+    <TextView
+        android:id="@+id/scoreid"
+        android:layout_width="50dp"
+        style="@style/scoreleiste"
+        android:freezesText="true"
+        android:layout_gravity="right" />
+
+    <TextView
+        style="@style/scoreleiste"
+        android:layout_gravity="right"
+        android:text="@string/round_caption" />
+
+    <TextView
+        android:id="@+id/rundeid"
+        android:layout_width="40dp"
+        style="@style/scoreleiste"
+        android:freezesText="true"
+        android:layout_gravity="right" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="rotBlass">#40FF0000</color>
+    <color name="rot">#FFFF0000</color>
+    <color name="gruenBlass">#4000FF00</color>
+    <color name="gruen">#FF00FF00</color>
+    <color name="blauBlass">#400000FF</color>
+    <color name="blau">#FF0000FF</color>
+    <color name="gelbBlass">#40FFFF00</color>
+    <color name="gelb">#FFFFFF00</color>
+    <!-- Extra colors for 3 x 2 board -->
+    <color name="orangeBlass">#40FFA500</color>
+    <color name="orange">#FFFFA500</color>
+    <color name="violettBlass">#408F00FF</color>
+    <color name="violett">#FF8F00FF</color>
+</resources>

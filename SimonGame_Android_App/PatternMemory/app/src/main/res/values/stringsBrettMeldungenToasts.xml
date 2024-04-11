@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="brettNachrichten">
+        <item>Super!! Jetzt bin ich an der Reihe.</item>
+        <item>Uuups!! Leider Verloren. Nochmal Spielen?</item>
+    </string-array>
+</resources>

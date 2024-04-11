@@ -1,0 +1,32 @@
+<resources>
+    <string name="nameApp">Simon HMI </string>
+    <string name="spielstartButton">Start Spiel</string>
+    <string name="initialisierungsfehler">Unerwartetes Fehler</string>
+    <string name="hilfeText">
+        Hallo hier spricht Simon :)\n
+        Drücken Sie Spielstart, dann zeige ich Ihnen eine Farbreihenfolge, die sie sich merken sollen.
+        Danach sind Sie dran. Wiederholen Sie die von mir angezeigte Reihenfolge, indem Sie die Farben antippen.\n
+        Sie können zwischen 2x2 oder 3x2 Spielfeld unter Einstellung wählen.
+        Nach dem Neustart erscheint die gewählte Ansicht.\n
+        Das wars auch schon :)\n
+        Viel Spaß!!
+
+    </string>
+    <string name="help_title">Anleitung</string>
+    <string name="round_caption"><b>Runde:</b></string>
+    <string name="score_caption"><b>Score:</b></string>
+    <string name="title_activity_main_activity2">MainActivity</string>
+    <string name="hello">Hello world!</string>
+
+    <!-- Einstellungen -->
+    <string name="schluesselGrossesBrett">schluesselGrossesBrett</string>
+    <string name="einstellungGrossesBrett">Spiele wie ein Meister</string>
+    <string name="einstellungenGrossesBrettZusammengefasst">Wenn Haken gesetzt! Nachdem Neustart spielst du 3x2.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <!-- Actionbar -->
+    <string name="action_begin">Spielstart</string>
+    <string name="action_help">Anleitung</string>
+    <string name="action_options">Einstellung</string>
+
+
+</resources>

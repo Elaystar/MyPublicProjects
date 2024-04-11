@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow android:layout_weight="0.5">
+
+        <Button
+            android:id="@+id/kachel1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_gruen" />
+
+        <Button
+            android:id="@+id/kachel2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_rot" />
+    </TableRow>
+
+    <TableRow android:layout_weight="0.5">
+
+        <Button
+            android:id="@+id/kachel3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_gelb" />
+
+        <Button
+            android:id="@+id/kachel4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_blau" />
+    </TableRow>
+</TableLayout>

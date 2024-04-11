@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.domg.simonhmi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/nameApp"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.domg.simonhmi.MainActivity"
+            android:label="@string/nameApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.domg.simonhmi.MainActivity$ActivityEinstellungen"
+            android:label="@string/action_options"
+            android:parentActivityName="com.example.domg.simonhmi.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.domg.simonhmi.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

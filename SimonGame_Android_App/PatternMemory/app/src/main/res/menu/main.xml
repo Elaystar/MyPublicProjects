@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.domg.simonhmi.MainActivity">
+
+    <item
+        android:id="@+id/start_spiel"
+        android:title="@string/action_begin"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/konfigurieren"
+        android:title="@string/action_options"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/hilfe"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+</menu>
