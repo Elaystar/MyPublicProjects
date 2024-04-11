@@ -1,5 +1,5 @@
 /**
-*@author Dominik Gierczak Martikelnr. 1132980 Übung2 RMI Distributed Systems Hoja
+*@author DomG RMI Distributed Systems
 *@version 2.0
 */
 import java.util.ArrayList;
@@ -29,18 +29,18 @@ public class RMI_Client_Stundenplan{
 				
 	
 		/**
-		 * hier erzeuge ich ein object für die registry
+		 * hier erzeuge ich ein object fÃ¼r die registry
 		 */
 		I_RMI_Stundenplan Datenbank=(I_RMI_Stundenplan)Naming.lookup("localhost/Vorlesungsservice");
 		
 		Vorlesung input = new Vorlesung();
 		
-		//werte hinzufügen testen
+		//werte hinzufÃ¼gen testen
 		//neueV.setTitelVorlesung("Mathe");
 		//neueV.setWochentag("Montag");
 		//neueV.setUhrzeitBeginn(timeNow);
 		
-		//vorlesung in datenbank hinzufügen
+		//vorlesung in datenbank hinzufÃ¼gen
 		//Datenbank.fuegeVorlesungHinzu(neueV);
 		
 		/*
@@ -48,18 +48,18 @@ public class RMI_Client_Stundenplan{
 		neueV.getTitelVorlesung();
 		neueV.getWochentag();
 		*/
-		//vorlesung in datenbank hinzufügen
+		//vorlesung in datenbank hinzufÃ¼gen
 		//Datenbank.fuegeVorlesungHinzu(neueV);
 	
 		
-		//--------------------------------------------------abändern und einbinden alles was oben
+		//--------------------------------------------------abÃ¤ndern und einbinden alles was oben
 		
 
 		Scanner eingabe = new Scanner(System.in);
 		String programmlaeuft="ja";
 		String wahl="";
-		System.out.println("Prüfwerte von arrayList alleVorlesungen: "+alleVorlesungen+"\n\n");
-		System.out.println("\t\tWillkommen zur Stundenplanverwaltung für Clients");
+		System.out.println("PrÃ¼fwerte von arrayList alleVorlesungen: "+alleVorlesungen+"\n\n");
+		System.out.println("\t\tWillkommen zur Stundenplanverwaltung fÃ¼r Clients");
 		
 		Datenbank.init();
 		
@@ -69,29 +69,29 @@ public class RMI_Client_Stundenplan{
 			 */
 			System.out.println("\n\t\t--------------------------------------------\n");
 			System.out.println("\n\t\tBitte treffen Sie Ihre Auswahl (1/2/3/4):");
-			System.out.println("\n\t\t\t1) Füge Vorlesung hinzu");
+			System.out.println("\n\t\t\t1) FÃ¼ge Vorlesung hinzu");
 			System.out.println("\n\t\t\t2) Hole alle Vorlesungen");
 			System.out.println("\n\t\t\t3) Wie viel Freizeit habe ich");
 			System.out.println("\n\t\t\t4) Schliesse Programm");
 			System.out.println("\n\t\t--------------------------------------------\n");
 			wahl=eingabe.next();
 			/*
-			 * Menüauswahl auf client was getan werden soll
+			 * MenÃ¼auswahl auf client was getan werden soll
 			 */
 			switch(wahl){
 			
-				case "1": 			System.out.println("\t\tSie haben "+wahl+") füge Vorlesung hinzu gewählt\n");
+				case "1": 			System.out.println("\t\tSie haben "+wahl+") fÃ¼ge Vorlesung hinzu gewÃ¤hlt\n");
 									
 				
 									System.out.println("\t\tFolgende Vorlesung stehen bereits in der Datenbank:\n\n");
 									Datenbank.init();
-									//vorlesung in datenbank hinzufügen
-									System.out.println("\n\t\tJetzt können Sie eine weitere Vorlesung hinzufügen\n\n");
+									//vorlesung in datenbank hinzufÃ¼gen
+									System.out.println("\n\t\tJetzt kÃ¶nnen Sie eine weitere Vorlesung hinzufÃ¼gen\n\n");
 			
 				String tmpwert="";
 				while(true){
 					//Vorlesung tmp = new Vorlesung(); // Objekt vom Typ Vorlesung
-					//werte hinzufügen
+					//werte hinzufÃ¼gen
 					/*input.setTitelVorlesung("default");
 					input.setWochentag("default");
 					input.setUhrzeitBeginn(timeNow);
@@ -114,10 +114,10 @@ public class RMI_Client_Stundenplan{
 					
 					//braucht man nicht hier
 					//alleVorlesungen.add(neueV);	
-					//vorlesung in datenbank hinzufügen
+					//vorlesung in datenbank hinzufÃ¼gen
 					Datenbank.fuegeVorlesungHinzu(input);
 										
-					System.out.println("Möchten Sie noch eine Vorlesung eingeben? (ja/nein)\n");
+					System.out.println("MÃ¶chten Sie noch eine Vorlesung eingeben? (ja/nein)\n");
 					String weiter;
 					weiter=eingabe.next();
 					if(weiter.equalsIgnoreCase("nein"))
@@ -125,7 +125,7 @@ public class RMI_Client_Stundenplan{
 				}//ende while			
 				break;
 				
-				case "2": 			System.out.println("\t\tSie haben "+wahl+") Hole alle Vorlesungen  gewählt\n");
+				case "2": 			System.out.println("\t\tSie haben "+wahl+") Hole alle Vorlesungen  gewÃ¤hlt\n");
 									
 									//System.out.println("\t\tSie haben "+wahl+") Ausgabe init():\n");
 									Datenbank.init();
@@ -144,7 +144,7 @@ public class RMI_Client_Stundenplan{
 								
 				break;
 				
-				case "3": 			System.out.println("\t\tSie haben "+wahl+") Wieviel Zeit habe ich gewählt\n");
+				case "3": 			System.out.println("\t\tSie haben "+wahl+") Wieviel Zeit habe ich gewÃ¤hlt\n");
 									Datenbank.init();
 									String[] freizeit = new String[5];
 									freizeit = new String[50];
@@ -157,7 +157,7 @@ public class RMI_Client_Stundenplan{
 
 				break;
 				
-				case "4": 			System.out.println("\t\tSie haben "+wahl+") Schliesse Programm gewählt\n");
+				case "4": 			System.out.println("\t\tSie haben "+wahl+") Schliesse Programm gewÃ¤hlt\n");
 									System.out.println("\t\tServer wird nun geschlossen\n");
 									Datenbank.schliesseProgramm();
 									System.out.println("\tServer geschlossen!\n");
@@ -171,19 +171,19 @@ public class RMI_Client_Stundenplan{
 		
 			
 			/*
-			 * abfrage ob äussere Schleife noch laufen soll oder programm beendet wird (wenn man wahl=4 trifft soll an server serverprogrun="nein" gesendet werden und clientprogrun="nein" auf client aus schleife springen und beenden
+			 * abfrage ob Ã¤ussere Schleife noch laufen soll oder programm beendet wird (wenn man wahl=4 trifft soll an server serverprogrun="nein" gesendet werden und clientprogrun="nein" auf client aus schleife springen und beenden
 			 */
-		//if(programmlaeuft.equalsIgnoreCase("nein"))  hier anders gelöst in der while schleife
+		//if(programmlaeuft.equalsIgnoreCase("nein"))  hier anders gelÃ¶st in der while schleife
 		//break;
-			//System.out.println("\t\tMöchten Sie im Clientprogramm fortfahren? (ja/nein)\n");
+			//System.out.println("\t\tMÃ¶chten Sie im Clientprogramm fortfahren? (ja/nein)\n");
 			//programmlaeuft=eingabe.next();
 		}//ende while programm auf client
-		System.out.println("Prüfwerte von arrayList alleVorlesungen: "+alleVorlesungen+"\n\n");
+		System.out.println("PrÃ¼fwerte von arrayList alleVorlesungen: "+alleVorlesungen+"\n\n");
 
 		eingabe.close();
 		System.exit(1);
 		Datenbank.schliesseProgramm();
-		System.out.println("programm auf beiden seiten beendet (zusätzlich)!");
+		System.out.println("programm auf beiden seiten beendet (zusÃ¤tzlich)!");
 		
 	}//ende main
 
