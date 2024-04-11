@@ -1,5 +1,5 @@
 /**
-*@author Dominik Gierczak Martikelnr. 1132980 Übung2 RMI Distributed Systems Hoja
+*@author DomG RMI Distributed Systems
 *@version 2.0
 */
 
