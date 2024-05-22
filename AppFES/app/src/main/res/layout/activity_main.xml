@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nachname.vorname.fes2dg.MainActivity"
+    android:paddingLeft="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/fes_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/logo_fes_only"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginTop="-25dp"
+        />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/fes_logo"
+        android:layout_marginLeft="40dp"
+        android:layout_above="@+id/save_data">
+        android:layout_alignTop="true"
+    </com.github.mikephil.charting.charts.LineChart>
+
+
+
+    <ImageView
+        android:id="@+id/feedbackLogo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/green_neu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+
+         />
+
+    <TextView
+        android:id="@+id/txtTagespunkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tagespunkte score"
+        android:textColor="@color/schwarz"
+        android:textSize="8dp"
+        android:layout_below="@+id/fes_logo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/txtWochenpunkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/schwarz"
+        android:textSize="8dp"
+        android:text="Wochen Punktzahl i. D.: 127"
+        android:layout_below="@+id/txtTagespunkte"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtMonatspunkte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/schwarz"
+        android:textSize="8dp"
+        android:text="Monats Punktzahl i. D.:182"
+        android:layout_below="@+id/txtWochenpunkte"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/punkt4test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/schwarz"
+        android:textSize="8dp"
+        android:text="Punkte alle Mitarbeiter i. D.:180"
+        android:layout_below="@+id/txtMonatspunkte"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Zeitstempel"
+        android:textSize="12dp"
+        android:layout_below="@+id/punkt4test"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/y_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timestamp"
+        android:layout_below="@+id/timestamp"
+        android:text="Beschl.-wert"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/y_value"
+        android:text="Wertzähler"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/txtPersonalID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personal ID"
+        android:textSize="12dp"
+        android:textColor="@color/darkgray"
+        android:layout_below="@+id/counter"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/mit_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+
+        android:layout_alignBaseline="@id/feedbackLogo"
+        android:layout_alignParentBottom="true"
+
+        />
+
+    <Button
+        android:id="@+id/save_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abmelden"
+
+        android:layout_toRightOf="@id/mit_popup"
+        android:layout_alignBaseline="@id/feedbackLogo"
+        android:layout_alignParentBottom="true"
+        />
+
+
+    <TextView
+        android:id="@+id/FeedbackMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FeedbackMessage"
+
+        android:layout_marginEnd="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/feedbackLogo"
+        android:layout_marginBottom="8dp" />
+
+
+</RelativeLayout>
